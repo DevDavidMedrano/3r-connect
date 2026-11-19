@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Marca — 3R Connect */
+  --color-onix: #0c0d10;
+  --color-carbon: #16181c;
+  --color-oro: #c9a227;
+  --color-oro-claro: #e8c766;
+  --color-oro-oscuro: #9c7a18;
+  /* Más vivo que --color-oro: para acentos sobre fondo oscuro (hero onix)
+     donde el oro base se ve apagado — titular, halos, toggle activo. */
+  --color-oro-brillante: #ffc72c;
+  --color-plata: #c7ccd1;
+  --color-marfil: #faf8f3;
+  --color-borde: #e3ddd1;
+
+  /* Referencia visual — bloque hero/footer y acentos de la landing pública */
+  --color-vino: #5c1a2e;
+  --color-vino-oscuro: #3e0f1e;
+  --color-vino-vivo: #a81f45;
+  --color-coral: #e8674f;
+  --color-rosa-suave: #f2a08c;
+  --color-blanco: #ffffff;
+  --color-gris-borde: #eaeaea;
+  --color-texto: #1a1a1a;
+  --color-texto-suave: #6b6b6b;
+
+  /* Semánticos — únicamente para indicadores de tendencia (zonas
+     destacadas, estadísticas). No son parte de la identidad de marca. */
+  --color-exito: #3f8a55;
+  --color-alerta: #b3392b;
+
+  --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --radius-3r-sm: 4px;
+  --radius-3r-md: 6px;
+  --radius-3r-lg: 28px;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-marfil text-onix antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+  }
+}
+
+@utility bg-gradient-oro {
+  background-image: linear-gradient(135deg, #e8c766, #c9a227, #9c7a18);
+}
